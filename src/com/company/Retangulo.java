@@ -7,8 +7,8 @@ public class Retangulo {
 
 	//constructor
 		public Retangulo(float base, float altura){
-			this.setBase(base);
-			this.setAltura(altura);
+			this.base = base;
+			this.altura = altura;
 		}
 
 	//cálculos
