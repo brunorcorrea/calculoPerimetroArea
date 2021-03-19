@@ -3,21 +3,29 @@ package com.company;
 public class Retangulo {
 
 	//declarações
-		private float base, altura;
+		private float base;
+		private float altura;
 
-	//constructor
+	//constructors
+		public Retangulo(){
+			this.base = 1;
+			this.altura = 1;
+		}
+
 		public Retangulo(float base, float altura){
-			this.base = base;
-			this.altura = altura;
+			if((base >= 1) && (base <= 20)) this.base = base;
+			else this.base = 1;
+			if((altura >= 1) && (altura<=20)) this.altura = altura;
+			else this.altura = 1;
 		}
 
 	//cálculos
 		public float calcPerimetro(){
-			return 2*(base+altura);
+			return 2*(this.base+this.altura);
 		}
 
 		public float calcArea(){
-			return base*altura;
+			return this.base*this.altura;
 		}
 
 	//getters
@@ -37,5 +45,6 @@ public class Retangulo {
 
 		public void setAltura(float altura){
 			if((altura >= 1) && (altura<=20)) this.altura = altura;
+			else this.altura = 1;
 		}
 }
